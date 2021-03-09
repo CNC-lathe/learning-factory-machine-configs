@@ -1,0 +1,20 @@
+_target_: dashboard.components.section
+name: "Turtle Bot"
+fields:
+  -
+    _target_: dashboard.components.vertical_nested_text_component
+    name: "Position"
+    fields:
+      -
+        _target_: dashboard.components.text_component
+        name: x
+        postfix: " m"
+      -
+        _target_: dashboard.components.text_component
+        name: y
+        postfix: " m"
+
+  -
+    _target_: dashboard.components.text_component
+    name: "Speed"
+    postfix: " mph"      # postpend units

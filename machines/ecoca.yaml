@@ -1,0 +1,33 @@
+name: "Ecoca CNC Lathe"
+fields:
+  -
+    _target_: dashboard.components.nested_text_component
+    name: "Position"
+    fields:
+      -
+        _target_: dashboard.components.text_component
+        name: x
+        postfix: " cm"
+      -
+        _target_: dashboard.components.text_component
+        name: y
+        postfix: " cm"
+      -
+        _target_: dashboard.components.text_component
+        name: z
+        postfix: " cm"
+
+  -
+    _target_: dashboard.components.text_component
+    name: "Turn Rate"
+    postfix: " rad/s"      # postpend units
+
+  -
+    _target_: dashboard.components.text_component
+    name: "Cut Rate"
+    postfix: " cm/s"       # postpend units
+
+  -
+    _target_: dashboard.components.text_component
+    name: "Temperature"
+    postfix: " \u00b0 F"   # postpend degrees symbol
