@@ -1,20 +1,34 @@
-_target_: dashboard.components.section
+_target_: dashboard.components.build_section
 name: "Turtle Bot"
 fields:
   -
-    _target_: dashboard.components.vertical_nested_text_component
+    _target_: dashboard.components.build_table
     name: "Position"
     fields:
       -
-        _target_: dashboard.components.text_component
         name: x
-        postfix: " m"
+        data: 0
+        postfix: "m"
       -
-        _target_: dashboard.components.text_component
         name: y
-        postfix: " m"
+        data: 0
+        postfix: "m"
 
   -
-    _target_: dashboard.components.text_component
-    name: "Speed"
-    postfix: " mph"      # postpend units
+    _target_: dashboard.components.build_table
+    name: "Rates and Status"
+    fields:
+      -
+        name: "Speed"
+        data: 0
+        postfix: "mph"      # postpend units
+
+      -
+        name: "Battery Remaining"
+        data: 100
+        postfix: "%"        # postpend units
+
+      -
+        name: "Temperature"
+        data: 0
+        postfix: "\u00b0F"   # postpend degrees symbol

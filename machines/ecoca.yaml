@@ -1,33 +1,73 @@
+_target_: dashboard.components.build_section
 name: "Ecoca CNC Lathe"
 fields:
   -
-    _target_: dashboard.components.nested_text_component
-    name: "Position"
+    _target_: dashboard.components.build_table
+    name: "Drill Position"
     fields:
       -
-        _target_: dashboard.components.text_component
         name: x
-        postfix: " cm"
+        data: 0
+        postfix: "cm"
       -
-        _target_: dashboard.components.text_component
         name: y
-        postfix: " cm"
+        data: 0
+        postfix: "cm"
       -
-        _target_: dashboard.components.text_component
         name: z
-        postfix: " cm"
+        data: 0
+        postfix: "cm"
 
   -
-    _target_: dashboard.components.text_component
-    name: "Turn Rate"
-    postfix: " rad/s"      # postpend units
+    _target_: dashboard.components.build_table
+    name: "Rates"
+    fields:
+      -
+        name: "Turn Rate"
+        data: 0
+        postfix: "rad/s"      # postpend units
+
+      -
+        name: "Cut Rate"
+        data: 0
+        postfix: "cm/s"       # postpend units
+
+      -
+        name: "Temperature"
+        data: 0
+        postfix: "\u00b0F"   # postpend degrees symbol
 
   -
-    _target_: dashboard.components.text_component
-    name: "Cut Rate"
-    postfix: " cm/s"       # postpend units
+    _target_: dashboard.components.build_table
+    name: "Status"
+    fields:
+      -
+        name: "Input Voltage"
+        data: 0
+        postfix: "V"      # postpend units
+
+      -
+        name: "Door Open"
+        data: True
+        postfix: ""
+
+      -
+        name: "Temperature"
+        data: 0
+        postfix: "\u00b0F"   # postpend degrees symbol
 
   -
-    _target_: dashboard.components.text_component
-    name: "Temperature"
-    postfix: " \u00b0 F"   # postpend degrees symbol
+    _target_: dashboard.components.build_row
+    name: "Job Information"
+    fields:
+      -
+        _target_: dashboard.components.build_text_component
+        name: "Job name"
+        data: "No current job"
+        postfix: ""
+
+      -
+        _target_: dashboard.components.build_text_component
+        name: "Job author"
+        data: "No current job author"
+        postfix: ""

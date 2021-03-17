@@ -1,0 +1,76 @@
+_target_: dashboard.components.build_section
+name: "Haas CNC"
+fields:
+  -
+    _target_: dashboard.components.build_table
+    name: "CNC Position"
+    fields:
+      -
+        name: x
+        data: 0
+        postfix: "cm"
+      -
+        name: y
+        data: 0
+        postfix: "cm"
+      -
+        name: z
+        data: 0
+        postfix: "cm"
+      -
+        name: u
+        data: 0
+        postfix: "rad"
+      -
+        name: v
+        data: 0
+        postfix: "rad"
+
+  -
+    _target_: dashboard.components.build_table
+    name: "Rates"
+    fields:
+      -
+        name: "Turn Rate"
+        data: 0
+        postfix: "rad/s"      # postpend units
+
+      -
+        name: "Cut Rate"
+        data: 0
+        postfix: "cm/s"       # postpend units
+
+  -
+    _target_: dashboard.components.build_table
+    name: "Status"
+    fields:
+      -
+        name: "Job time to completion"
+        data: 0
+        postfix: ""
+
+      -
+        name: "Door open"
+        data: True
+        postfix: ""
+
+      -
+        name: "Temperature"
+        data: 0
+        postfix: "\u00b0F"   # postpend degrees symbol
+
+  -
+    _target_: dashboard.components.build_row
+    name: "Job Information"
+    fields:
+      -
+        _target_: dashboard.components.build_text_component
+        name: "Job name"
+        data: "No current job"
+        postfix: ""
+
+      -
+        _target_: dashboard.components.build_text_component
+        name: "Job author"
+        data: "No current job author"
+        postfix: ""
