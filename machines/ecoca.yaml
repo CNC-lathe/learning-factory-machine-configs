@@ -32,11 +32,6 @@ fields:
         data: 0
         postfix: "cm/s"       # postpend units
 
-      -
-        name: "Temperature"
-        data: 0
-        postfix: "\u00b0F"   # postpend degrees symbol
-
   -
     _target_: dashboard.components.build_table
     name: "Status"
