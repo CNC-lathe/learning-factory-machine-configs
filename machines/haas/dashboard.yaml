@@ -1,0 +1,91 @@
+_target_: dashboard.components.build_section
+name: "Haas CNC"
+id: "haas"
+fields:
+  -
+    _target_: dashboard.components.build_table
+    name: "CNC Position"
+    id: "position"
+    fields:
+      -
+        name: "x"
+        id: "x"
+        data: 0
+        postfix: "cm"
+      -
+        name: "y"
+        id: "y"
+        data: 0
+        postfix: "cm"
+      -
+        name: "z"
+        id: "z"
+        data: 0
+        postfix: "cm"
+      -
+        name: "u"
+        id: "u"
+        data: 0
+        postfix: "rad"
+      -
+        name: "v"
+        id: "v"
+        data: 0
+        postfix: "rad"
+
+  -
+    _target_: dashboard.components.build_table
+    name: "Rates"
+    fields:
+      -
+        name: "Turn Rate"
+        id: "turn_rate"
+        data: 0
+        postfix: "rad/s"      # postpend units
+
+      -
+        name: "Cut Rate"
+        id: "cut_rate"
+        data: 0
+        postfix: "cm/s"       # postpend units
+
+  -
+    _target_: dashboard.components.build_table
+    name: "Status"
+    fields:
+      -
+        name: "Job time to completion"
+        id: "time_to_completion"
+        data: 0
+        postfix: ""
+
+      -
+        name: "Door open"
+        id: "door_open"
+        data: True
+        postfix: ""
+
+      -
+        name: "Temperature"
+        id: "temperature"
+        data: 0
+        postfix: "\u00b0F"   # postpend degrees symbol
+
+  -
+    _target_: dashboard.components.build_row
+    name: "Job Information"
+    id: "job_info"
+    fields:
+      -
+        _target_: dashboard.components.build_text_component
+        name: "Job name"
+        id: "job_name"
+        data: "No current job"
+        postfix: ""
+
+      -
+        _target_: dashboard.components.build_text_component
+        name: "Job author"
+        id: "job_author"
+        data: "No current job author"
+        postfix: ""

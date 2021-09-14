@@ -1,0 +1,20 @@
+position:
+  - "x"
+  - "y"
+  - "z"
+  - "u"
+  - "v"
+
+rates:
+  - "turn_rate"
+  - "cut_rate"
+
+status:
+  - "time_to_completion"
+  - "door_open"
+  - "temperature"
+
+job_info:
+  - "job_name"
+  - "job_author"
+

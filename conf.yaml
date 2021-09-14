@@ -1,3 +1,3 @@
-ecoca: !include machines/ecoca.yaml
-haas: !include machines/haas.yaml
-turtle: !include machines/turtle.yaml
+ecoca: !include machines/ecoca/dashboard.yaml
+haas: !include machines/haas/dashboard.yaml
+turtle: !include machines/turtle/dashboard.yaml

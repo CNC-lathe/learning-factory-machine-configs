@@ -1,0 +1,18 @@
+position:
+  - "x"
+  - "y"
+  - "z"
+
+rates:
+  - "turn_rate"
+  - "cut_rate"
+
+status:
+  - "input_voltage"
+  - "door_open"
+  - "temperature"
+
+job_info:
+  - "job_name"
+  - "job_author"
+

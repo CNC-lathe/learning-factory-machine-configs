@@ -1,34 +1,42 @@
 _target_: dashboard.components.build_section
 name: "Turtle Bot"
+id: "turtle"
 fields:
   -
     _target_: dashboard.components.build_table
     name: "Position"
+    id: "position"
     fields:
       -
-        name: x
+        name: "x"
+        id: "x"
         data: 0
         postfix: "m"
       -
-        name: y
+        name: "y"
+        id: "y"
         data: 0
         postfix: "m"
 
   -
     _target_: dashboard.components.build_table
     name: "Rates and Status"
+    id: "rates_and_status"
     fields:
       -
         name: "Speed"
+        id: "speed"
         data: 0
         postfix: "mph"      # postpend units
 
       -
         name: "Battery Remaining"
+        id: "batter"
         data: 100
         postfix: "%"        # postpend units
 
       -
         name: "Temperature"
+        id: "temperature"
         data: 0
         postfix: "\u00b0F"   # postpend degrees symbol

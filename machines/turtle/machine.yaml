@@ -1,0 +1,9 @@
+position:
+  - x
+  - y
+
+rates_and_status:
+  - speed
+  - battery
+  - temperature
+
