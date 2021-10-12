@@ -4,79 +4,22 @@ id: "ecoca"
 fields:
   -
     _target_: dashboard.components.build_table
-    name: "Drill Position"
-    id: "position"
-    fields:
-      -
-        name: "x"
-        id: "x"
-        data: 0
-        postfix: "cm"
-      -
-        name: "y"
-        id: "y"
-        data: 0
-        postfix: "cm"
-      -
-        name: "z"
-        id: "z"
-        data: 0
-        postfix: "cm"
-
-  -
-    _target_: dashboard.components.build_table
     name: "Rates"
     id: "rates"
     fields:
       -
-        name: "Turn Rate"
-        id: "turn_rate"
+        name: "Spindle Speed"
+        id: "spindle_speed"
         data: 0
         postfix: "rad/s"      # postpend units
-
-      -
-        name: "Cut Rate"
-        id: "cut_rate"
-        data: 0
-        postfix: "cm/s"       # postpend units
 
   -
     _target_: dashboard.components.build_table
     name: "Status"
     fields:
-      -
-        name: "Input Voltage"
-        id: "input_voltage"
-        data: 0
-        postfix: "V"      # postpend units
 
       -
         name: "Door Open"
         id: "door_open"
         data: True
-        postfix: ""
-
-      -
-        name: "Temperature"
-        id: "temperature"
-        data: 0
-        postfix: "\u00b0F"   # postpend degrees symbol
-
-  -
-    _target_: dashboard.components.build_row
-    name: "Job Information"
-    id: "job_info"
-    fields:
-      -
-        _target_: dashboard.components.build_text_component
-        name: "Job name"
-        id: "job_name"
-        data: "No current job"
-        postfix: ""
-
-      -
-        _target_: dashboard.components.build_text_component
-        name: "Job author"
-        id: "job_author"
-        data: "No current job author"
         postfix: ""

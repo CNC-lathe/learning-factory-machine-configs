@@ -1,18 +1,5 @@
-position:
-  - "x"
-  - "y"
-  - "z"
+status:
+  - "door_open"
 
 rates:
-  - "turn_rate"
-  - "cut_rate"
-
-status:
-  - "input_voltage"
-  - "door_open"
-  - "temperature"
-
-job_info:
-  - "job_name"
-  - "job_author"
-
+  - "spindle_speed"
