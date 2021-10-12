@@ -1,0 +1,6 @@
+_target_: server.machine_interfaces.cnc_lathe
+publish_port: 49152
+  machine_config:
+    bt_params:
+      service_uuid: None
+
